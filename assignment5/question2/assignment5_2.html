@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Repeat Message</title>
+  <script>
+    window.onload = function () {
+      let num = parseInt(prompt("Enter the number of times to print the message:"));
+      
+      // Validate integer input
+      if (isNaN(num) || num <= 0) {
+        alert("Please enter a valid positive integer!");
+        location.reload();  // reloads page for new input
+        return;
+      }
+
+      let msg = prompt("Enter the message:");
+
+      alert("Check the console for the repeated message!");
+
+      console.log("Repeated Message:");
+      for (let i = 1; i <= num; i++) {
+        console.log(i + ". " + msg);
+      }
+    };
+  </script>
+</head>
+<body>
+</body>
+</html>

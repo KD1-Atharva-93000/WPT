@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #box{
+           display: flex;
+           width: 500px;
+           height:300px;
+           border: 4px black; 
+           background-color: rgb(145, 223, 249);
+           justify-content: center;
+           margin-left: 480px;
+           margin-top: 100px;
+        }
+
+        table{
+           display: flex;
+           width: 500px;
+           height:300px;
+           border: 4px black; 
+           background-color: rgb(145, 223, 249);
+           justify-content: center;
+           margin-left: 480px;
+           margin-top: 100px;
+        }
+
+        #first{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        
+        <div>
+            
+             <tbody id ="first">
+           <tr><td><h3><b>Calculator</b></h3></td></tr>
+            <tr>
+            <td><label>Enter Number 1</label></td>
+            <td><input type="number" id="num1"></td>
+        </tr>
+        <tr>
+            <td><label>Enter Number 2</label></td>
+            <td><input type="number" id="num2"></td>
+        </tr>
+        <tr>
+            <td><label>Result</label></td>
+            <td><input type="number" id="result"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center;">
+                <button onclick="add()">Addition</button>
+                <button onclick="sub()">Substraction</button>
+                <button onclick="mul()">Multiplication</button>
+                <button onclick="div()">Division</button>
+            </td>
+        </tr>
+        </tbody>
+        </div>
+       
+        
+    </table>
+
+
+    <script>
+        function add(){
+            let num1 = parseFloat(document.getElementById("num1").value)
+            let num2 = parseFloat(document.getElementById("num2").value)
+            const ans = num1 + num2;
+            document.getElementById("result").value = ans;
+            
+        }
+        function sub(){
+            let num1 = parseFloat(document.getElementById("num1").value)
+            let num2 = parseFloat(document.getElementById("num2").value)
+            const ans = num1 - num2;
+            document.getElementById("result").value = ans;
+            
+        }
+        function mul(){
+            let num1 = parseFloat(document.getElementById("num1").value)
+            let num2 = parseFloat(document.getElementById("num2").value)
+            const ans = num1 * num2;
+            document.getElementById("result").value = ans;
+            
+        }
+        function div(){
+            let num1 = parseFloat(document.getElementById("num1").value)
+            let num2 = parseFloat(document.getElementById("num2").value)
+            const ans = num1 / num2;
+            document.getElementById("result").value = ans;
+            
+        }
+    </script>
+</body>
+</html>

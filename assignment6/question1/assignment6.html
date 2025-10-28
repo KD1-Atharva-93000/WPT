@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta charset="UTF-8">
+<style>
+    #first{
+        font-size: larger;
+        color: red;
+
+    }
+</style>
+    </head>
+
+    <body>
+   <h1>Date and Greeting Web Page</h1>
+
+   <div id="first">Today is</div>
+   <div id="second">Number of days left till end of year: </div>
+   
+   <script>
+    //const div1=document.getElementById("first")
+    const date = new Date()
+    first.innerText = `Today is ${date.getDate()}, ${date.getMonth()} ${date.getFullYear()}  `
+    console.log(date)
+    const today = new Date()
+    const endofYear = new Date(date.getFullYear(),11,31);
+    const diff = endofYear - today
+    second.innerText = `Number of days left till end of year: ${diff}`
+   </script>
+    </body>
+</html>

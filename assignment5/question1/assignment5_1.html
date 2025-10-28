@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Largest Number Finder</title>
+  <script>
+    // Run script automatically on page load
+    window.onload = function() {
+      let numbers = [];
+
+      for (let i = 1; i <= 3; i++) {
+        let num;
+
+        // Keep prompting until valid input
+        while (true) {
+          num = prompt(`Enter ${i === 1 ? 'first' : i === 2 ? 'second' : 'third'} positive number:`);
+
+          // Cancel check
+          if (num === null) return; 
+
+          // Convert to number and validate
+          num = Number(num);
+          if (!isNaN(num) && num > 0 && Number.isInteger(num)) {
+            numbers.push(num);
+            break;
+          } else {
+            alert("Please enter valid positive numbers!");
+          }
+        }
+      }
+
+      // Find and show the largest number
+      const largest = Math.max(...numbers);
+      alert(`The largest number is ${largest}`);
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>
